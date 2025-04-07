@@ -193,5 +193,16 @@
                 this.reset();
             });
         </script>
+
+<script src="firebase-config.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script>
+    firebase.initializeApp(window.firebaseConfig);
+    const script = document.createElement('script');
+    script.src = 'auth-check.js';
+    document.body.appendChild(script); </script>
     </body>
+   
+
 </html>
