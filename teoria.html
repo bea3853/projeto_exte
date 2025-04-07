@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Teoria Musical</title>
+
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		 <script type="text/javascript" src="js/script.js"></script>
+		 <meta name="viewport" content="width=device-width, inital-scale=1.0">
+
+
+	</head>
+
+
+	<body>
+		<div id="navigation" class="navigation">
+			<ul>
+				<li><a href="login.html">Home</a></li>
+				<li><a href="aulas.html">Conteúdo</a></li>
+				<li><a href="quem.html">Quem somos</a></li>
+				<li ><a href="#" onclick="logout()">Sair</a></li>
+				<!-- Botão de Sair (oculto inicialmente) -->
+				<!-- <li id="logout-btn" style="display: none;"><a href="#" onclick="logout()">Sair</a></li> -->
+				<li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+			</ul>
+		</div>
+			
+			<div class="main">
+				
+				
+				<ul class="caminho">
+					<li>Home</li>
+					<li>></li>
+					<li>Conteúdo</li>
+					<li>></li>
+					<li>Teoria</li>
+				</ul>
+
+				<h1>Escalas / campo harmonico / métodos</h1>
+				
+			<p>Em algum momento das nossas vidinhas já nos deparamos com estes sons:</p>
+			
+				<p>7 notas musicais: </p>
+				<a href=""><h3>Dó  -  Ré   -   Mi   -   Fá   -   Sol   -   Lá  -  Si</h3></a>
+				<p>Cifras</p>
+				<h3>Dó=C  -  Ré=D  -  Mi=E  -  Fá=F  -   Sol=G  -  Lá=A  -  Si=B</h3>
+				<p>São os códigos que utilizamos para nomear os sons. Imagine uma escada o primeiro degrau é o dó e o último o si, agora acrescente um som grave para o primeiro degrau.
+				Conforme avança degrau acima as notas tornam-se mais agudas, no último degrau o som é o mais agudo da escada.</p>
+				<p>E se por acaso eu substituisse o "d" de escada por um "L" de escala?</p>
+				<p>Teremos então, a escala de Dó maior a medida que subimos os degraus o som torna-se mais agudo.</p>
+				<img class="foto-trabalhos" src="img/escalas.jpg">
+				<p>O dó se repete no final, pois é uma oitava, mas não se apegue a isso agora.</p>
+										
+				<h2>Escala Maior</h2>
+				<p>A numeração é referente é referente ao grau da escala, lembra a escada ali encima.</p>
+				<p>Portanto o número 1 é o tom principal e o número 8 é sua extenssão, a grosso modo, são iguais, só que o oitavo grau é mais agudo. </p>
+                <p>Os graus que possuem '#' e 'b' são acidentes, sim acidentes músicais. Não irei extender aqui este assunto. Mais fotografe isso com sua mente '#' e 'b' são acidentes.</p>
+                <img class="foto-trabalhos" src="img/T1.jpg">
+				
+						
+				<h2>Campo harmônico e combinações</h2>
+				<p></p>
+                <p></p>
+                <img class="foto-trabalhos" src="img/t3.jpg">
+				<p>Sabe aquela música que gruda na cabeça? Vira hit de verão e você não consegue esquecer... Provavelmente ela foi criada com uma destas combinações harmonicas. 
+                Na parte azul da img, estão as combinações mais utilizadas na música, se você decorar isso pode tocar ou adaptar a maioria das músicas que escutar.</p>
+				<p>Quando você aprender a tocar vai ficar impressionado o quanto algumas músicas de sucesso são super facies de reproduzir.</p>
+                <p>Vai ficar espantado com a genialidade de algumas produções, "dificil é fazer o fácil, as vezes".</p>				
+<br>
+
+
+
+<br>
+<h1>Video aula</h1>
+    <style>
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            position: relative;
+            background: #000;
+        }
+        
+        .video-player {
+            width: 100%;
+            display: block;
+        }
+        
+        .controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .video-container:hover .controls {
+            opacity: 1;
+        }
+        
+        .progress-container {
+            width: 100%;
+            height: 5px;
+            background: #333;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: #f00;
+            width: 0%;
+        }
+        
+        button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin: 0 5px;
+            font-size: 16px;
+        }
+        
+        .time {
+            color: white;
+            margin: 0 10px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .volume-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+        
+        .volume-slider {
+            width: 80px;
+            height: 5px;
+            background: #333;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        
+        .volume-level {
+            height: 100%;
+            background: white;
+            width: 100%;
+        }
+    </style>
+
+
+    <div class="video-container">
+        <video class="video-player" src="https://videos.pexels.com/video-files/7352117/7352117-uhd_2560_1080_25fps.mp4"></video>
+        
+        <div class="controls">
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            
+            <button class="play-btn">►</button>
+            <span class="time">0:00 / 0:00</span>
+            
+            <div class="volume-container">
+                <button class="mute-btn">🔊</button>
+                <div class="volume-slider">
+                    <div class="volume-level"></div>
+                </div>
+            </div>
+            
+            <button class="fullscreen-btn">⛶</button>
+        </div>
+    </div>
+
+    <script>
+        // Elementos
+        const video = document.querySelector('.video-player');
+        const playBtn = document.querySelector('.play-btn');
+        const muteBtn = document.querySelector('.mute-btn');
+        const volumeSlider = document.querySelector('.volume-slider');
+        const volumeLevel = document.querySelector('.volume-level');
+        const progressContainer = document.querySelector('.progress-container');
+        const progressBar = document.querySelector('.progress-bar');
+        const timeDisplay = document.querySelector('.time');
+        const fullscreenBtn = document.querySelector('.fullscreen-btn');
+        const videoContainer = document.querySelector('.video-container');
+
+        // Play/Pause
+        playBtn.addEventListener('click', togglePlay);
+        video.addEventListener('click', togglePlay);
+
+        function togglePlay() {
+            if (video.paused) {
+                video.play();
+                playBtn.textContent = '❚❚';
+            } else {
+                video.pause();
+                playBtn.textContent = '►';
+            }
+        }
+
+        // Volume
+        muteBtn.addEventListener('click', toggleMute);
+        volumeSlider.addEventListener('click', setVolume);
+
+        function toggleMute() {
+            video.muted = !video.muted;
+            muteBtn.textContent = video.muted ? '🔇' : '🔊';
+        }
+
+        function setVolume(e) {
+            const rect = volumeSlider.getBoundingClientRect();
+            const pos = (e.clientX - rect.left) / rect.width;
+            video.volume = pos;
+            volumeLevel.style.width = `${pos * 100}%`;
+            video.muted = pos === 0;
+            muteBtn.textContent = pos === 0 ? '🔇' : '🔊';
+        }
+
+        // Progresso
+        video.addEventListener('timeupdate', updateProgress);
+        progressContainer.addEventListener('click', setProgress);
+
+        function updateProgress() {
+            const percent = (video.currentTime / video.duration) * 100;
+            progressBar.style.width = `${percent}%`;
+            
+            // Formatar tempo
+            const formatTime = (time) => {
+                const minutes = Math.floor(time / 60);
+                const seconds = Math.floor(time % 60);
+                return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            };
+            
+            timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
+        }
+
+        function setProgress(e) {
+            const rect = progressContainer.getBoundingClientRect();
+            const pos = (e.clientX - rect.left) / rect.width;
+            video.currentTime = pos * video.duration;
+        }
+
+        // Tela cheia
+        fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                videoContainer.requestFullscreen().catch(err => {
+                    console.error(`Erro ao tentar tela cheia: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+<br>
+
+
+
+<br>
+				&#8592;<a class="back-link" href="aulas.html" target="blank">Voltar<a>
+
+			</div>	
+
+			
+
+	</body>
+
+			<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+<script>
+    // Configuração do Firebase (use as mesmas credenciais do login.html)
+    const firebaseConfig = {
+        apiKey: "AIzaSyB5VcUXF2RRXfhAokwHh49dTr2Y3HARruI",
+        authDomain: "atosbd.firebaseapp.com",
+        projectId: "atosbd",
+        storageBucket: "atosbd.firebasestorage.app",
+        messagingSenderId: "945960456743",
+        appId: "1:945960456743:web:12be3490cffc8e4631b402"
+    };
+
+    // Inicializa o Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    // Mostra/oculta o botão "Sair" conforme o estado de login
+    auth.onAuthStateChanged((user) => {
+        if (user) {
+            document.getElementById("logout-btn").style.display = "block";
+        } else {
+            document.getElementById("logout-btn").style.display = "none";
+        }
+    });
+
+    // Função para logout
+    function logout() {
+        auth.signOut()
+            .then(() => {
+                window.location.href = "index.html"; // Redireciona para a página de login
+            })
+            .catch((error) => {
+                console.error("Erro ao sair:", error);
+            });
+    }
+</script>
+
+</html>

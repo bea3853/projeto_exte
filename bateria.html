@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Bateria </title>
+
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		 <script type="text/javascript" src="js/script.js"></script>
+		<meta name="viewport" content="width=device-width, inital-scale=1.0">
+
+
+	</head>
+
+
+	<body>
+
+		<div id="navigation" class="navigation">
+			<ul>
+				<li><a href="login.html">Home</a></li>
+				<li><a href="aulas.html">Conteúdo</a></li>
+				<li><a href="quem.html">Quem somos</a></li>
+				<li ><a href="#" onclick="logout()">Sair</a></li>
+				<!-- Botão de Sair (oculto inicialmente) -->
+				<!-- <li id="logout-btn" style="display: none;"><a href="#" onclick="logout()">Sair</a></li> -->
+				<li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+			</ul>
+		</div>
+			
+			<div class="main">
+				
+				
+
+
+				<h1>Bateria faz música? </h1>
+				<p> Antes de responder essa pergunta, vamos conhecer as peças do instrumento </p>
+				</ul>
+				<img class="foto-trabalhos" src="img/d1.jpg">
+				<h5>Foto de Ingridi Alves Photograph</h5>
+				<p>A música nasce a partir de 3 elementos:</p> 
+                <ul>   
+	            <li><b>Melodia</b> -  Uma nota de cada vez.</li>
+				<li><b>Harmonia</b> - Notas que se combinam, tocadas juntas.</li>
+				<li><b>Ritmo</b> - Tempo da música.</li>
+				<p>Logo, podemos dizer que a bateria é um instrumento de ritmo, embora, ela esteja apenas marcando o tempo, faz total diferença em um conjunto. </p>
+				
+							
+				</ul>
+				
+				<h3>Pegando na baqueta</h3>
+				
+				<p>Existe um padrão para pegar na baqueta, chama-se <u>pinça</u>. Existem 2 tipos de pinças, a tradicional e a mais convencional. </p>
+				
+				<h3>Pinça convencional -  vamos utilizar essa!</h3>
+				<p>Baqueta entre polegar e indicador, como um ganchinho, feche os outros dedos. Lembrando que o principal ponto de equilibrio está 4 dedos depois da ponta inferior.</p>
+				<img class="foto-trabalhos" src="img/D6.jpg">
+				<h5>Photo by Ingridi Alves Photograph on Unsplash</h5>
+				
+				<h2>Preparação:</h2>
+				
+				<p> Cada baterista organiza suas peças da forma que mais lhe agrada.</p>
+				<p>Bateristas da igreja, por exemplo, deixam a  caixa com posicionamento reto, devido a algumas tecnicas e sons diferenciados que podem ser extraídos do aro da caixa. </p>
+				<p>Baterista de heavy metal, normalmente  utilizam pedal duplo.</p>
+				<p>Bateristas de rua optam por uilizar malas no lugar do bumbo (o som é maravilhoso).</p>
+				<h3>Gosto é que nem celular, cada um tem o seu</h3>
+				<br>
+				<p>Antes de iniciar seus estudos, importante lembrar que sempre é necessário ajustar as peças. </p>
+				<ul><li>Sente - se no banco</li><li> Mantenha a coluna reta</li><li>Regule o banco para a posição mais confortével</li><li>Traga a caixa para o meio das pernas</li>
+				<li>Alinhe os pés sobre os pedais</li></ul>
+				
+				<h3>Metrônomo</h3>
+				
+				<p>Metrônomo é o objeto que marca o tempo da música. Informando o tempo de execução e dos exercícios também.</p>
+				<p>Já escutou alguma vez um "teque" contínuo no fundo de uma música? Pois bem, é o tal do metrônomo em ação.</p>
+               	<p>Com ele visualizamos os "BPMs", ou batidas por minuto, confesso que ele é chatinho, mas todo mundo tem um amigo chato... fique amigo do metônomo, nunca será uma perda de tempo, rs!</p>
+				<p>Podemos comprar um metrônomo em uma loja de instrumentos ou baixar o aplicativo. Existem milhares...</p>
+				<p>Mas se você é prático e não gosta de perder tempo, segue abaixo um metrônomo fácil de utilizar e que esta disponível gratuitamente na net, O metrônomo do Google ;) </p>
+						
+				<a href="https://bit.ly/2mpttsh " Alt="Metrônomo do Google">Clica aqui</a>
+				<br>
+														
+				<br>
+				<h1>Video aula</h1>
+					<style>
+						.video-container {
+							width: 100%;
+							max-width: 800px;
+							margin: 20px auto;
+							position: relative;
+							background: #000;
+						}
+						
+						.video-player {
+							width: 100%;
+							display: block;
+						}
+						
+						.controls {
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							background: rgba(0,0,0,0.7);
+							padding: 10px;
+							display: flex;
+							flex-wrap: wrap;
+							align-items: center;
+							opacity: 0;
+							transition: opacity 0.3s;
+						}
+						
+						.video-container:hover .controls {
+							opacity: 1;
+						}
+						
+						.progress-container {
+							width: 100%;
+							height: 5px;
+							background: #333;
+							margin-bottom: 10px;
+							cursor: pointer;
+						}
+						
+						.progress-bar {
+							height: 100%;
+							background: #f00;
+							width: 0%;
+						}
+						
+						button {
+							background: none;
+							border: none;
+							color: white;
+							cursor: pointer;
+							margin: 0 5px;
+							font-size: 16px;
+						}
+						
+						.time {
+							color: white;
+							margin: 0 10px;
+							font-family: Arial, sans-serif;
+						}
+						
+						.volume-container {
+							display: flex;
+							align-items: center;
+							margin-left: auto;
+						}
+						
+						.volume-slider {
+							width: 80px;
+							height: 5px;
+							background: #333;
+							margin-left: 5px;
+							cursor: pointer;
+						}
+						
+						.volume-level {
+							height: 100%;
+							background: white;
+							width: 100%;
+						}
+					</style>
+				
+				<body>
+					<div class="video-container">
+						<video class="video-player" src="https://videos.pexels.com/video-files/7507636/7507636-uhd_2560_1440_25fps.mp4"></video>
+						
+						<div class="controls">
+							<div class="progress-container">
+								<div class="progress-bar"></div>
+							</div>
+							
+							<button class="play-btn">►</button>
+							<span class="time">0:00 / 0:00</span>
+							
+							<div class="volume-container">
+								<button class="mute-btn">🔊</button>
+								<div class="volume-slider">
+									<div class="volume-level"></div>
+								</div>
+							</div>
+							
+							<button class="fullscreen-btn">⛶</button>
+						</div>
+					</div>
+				
+					<script>
+						// Elementos
+						const video = document.querySelector('.video-player');
+						const playBtn = document.querySelector('.play-btn');
+						const muteBtn = document.querySelector('.mute-btn');
+						const volumeSlider = document.querySelector('.volume-slider');
+						const volumeLevel = document.querySelector('.volume-level');
+						const progressContainer = document.querySelector('.progress-container');
+						const progressBar = document.querySelector('.progress-bar');
+						const timeDisplay = document.querySelector('.time');
+						const fullscreenBtn = document.querySelector('.fullscreen-btn');
+						const videoContainer = document.querySelector('.video-container');
+				
+						// Play/Pause
+						playBtn.addEventListener('click', togglePlay);
+						video.addEventListener('click', togglePlay);
+				
+						function togglePlay() {
+							if (video.paused) {
+								video.play();
+								playBtn.textContent = '❚❚';
+							} else {
+								video.pause();
+								playBtn.textContent = '►';
+							}
+						}
+				
+						// Volume
+						muteBtn.addEventListener('click', toggleMute);
+						volumeSlider.addEventListener('click', setVolume);
+				
+						function toggleMute() {
+							video.muted = !video.muted;
+							muteBtn.textContent = video.muted ? '🔇' : '🔊';
+						}
+				
+						function setVolume(e) {
+							const rect = volumeSlider.getBoundingClientRect();
+							const pos = (e.clientX - rect.left) / rect.width;
+							video.volume = pos;
+							volumeLevel.style.width = `${pos * 100}%`;
+							video.muted = pos === 0;
+							muteBtn.textContent = pos === 0 ? '🔇' : '🔊';
+						}
+				
+						// Progresso
+						video.addEventListener('timeupdate', updateProgress);
+						progressContainer.addEventListener('click', setProgress);
+				
+						function updateProgress() {
+							const percent = (video.currentTime / video.duration) * 100;
+							progressBar.style.width = `${percent}%`;
+							
+							// Formatar tempo
+							const formatTime = (time) => {
+								const minutes = Math.floor(time / 60);
+								const seconds = Math.floor(time % 60);
+								return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+							};
+							
+							timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
+						}
+				
+						function setProgress(e) {
+							const rect = progressContainer.getBoundingClientRect();
+							const pos = (e.clientX - rect.left) / rect.width;
+							video.currentTime = pos * video.duration;
+						}
+				
+						// Tela cheia
+						fullscreenBtn.addEventListener('click', toggleFullscreen);
+				
+						function toggleFullscreen() {
+							if (!document.fullscreenElement) {
+								videoContainer.requestFullscreen().catch(err => {
+									console.error(`Erro ao tentar tela cheia: ${err.message}`);
+								});
+							} else {
+								document.exitFullscreen();
+							}
+						}
+					</script>
+				<br>
+<br>
+
+				&#8592;<a class="back-link" href="aulas.html" target="blank">Voltar<a>
+
+			</div>	
+
+			
+
+	</body>
+
+			<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+<script>
+    // Configuração do Firebase (use as mesmas credenciais do login.html)
+    const firebaseConfig = {
+        apiKey: "AIzaSyB5VcUXF2RRXfhAokwHh49dTr2Y3HARruI",
+        authDomain: "atosbd.firebaseapp.com",
+        projectId: "atosbd",
+        storageBucket: "atosbd.firebasestorage.app",
+        messagingSenderId: "945960456743",
+        appId: "1:945960456743:web:12be3490cffc8e4631b402"
+    };
+
+    // Inicializa o Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    // Mostra/oculta o botão "Sair" conforme o estado de login
+    auth.onAuthStateChanged((user) => {
+        if (user) {
+            document.getElementById("logout-btn").style.display = "block";
+        } else {
+            document.getElementById("logout-btn").style.display = "none";
+        }
+    });
+
+    // Função para logout
+    function logout() {
+        auth.signOut()
+            .then(() => {
+                window.location.href = "index.html"; // Redireciona para a página de login
+            })
+            .catch((error) => {
+                console.error("Erro ao sair:", error);
+            });
+    }
+</script>
+
+</html>

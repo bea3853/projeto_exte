@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contato</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="js/script.js"></script>
+        <!-- Firebase SDK -->
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            .content {
+                display: flex;
+                justify-content: center;
+            }
+            .content h3 {
+                text-align: center;
+            }
+            .contato {
+                width: 100%;
+                max-width: 500px;
+            }
+            .form {
+                display: flex;
+                flex-direction: column;
+            }
+            .field {
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #DDD;
+                border-radius: 5px;
+                font-family: 'Montserrat', sans-serif;
+            }
+            textarea {
+                height: 150px;
+            }
+            #user-email {
+                font-weight: bold;
+                color: #007bff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="navigation" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aulas.html">Conteúdo</a></li>
+                <li><a href="quem.html">Quem somos</a></li>
+                <li id="logout-btn" style="display: none;"><a href="#" onclick="logout()">Sair</a></li>
+                <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+            </ul>
+        </div>
+        
+        <div class="main">
+            <h1>Contato</h1>
+            <hr>
+        </div>
+        
+        <section class="content">
+            <div class="contato">
+                <h3>E-mail para contato: <span id="user-email"></span></h3>
+                
+                <form id="contact-form" class="form">
+                    <input class="field" name="name" id="name" placeholder="Nome" required> 
+                    <input class="field" name="email" id="email" placeholder="E-Mail" type="email" required>
+                    <textarea class="field" name="message" id="message" placeholder="Digite sua mensagem aqui." required></textarea> 
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
+        
+        <br>
+        &#8592;<a class="back-link" href="aulas.html">Voltar</a>
+
+		
+		<style>
+
+			footer {
+	background-color: #f8f9fa;
+	padding: 1.2rem 0;
+	text-align: center;
+	border-top: 1px solid #e9ecef;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+			
+			footer h5 {
+				margin: 0 0 0.5rem 0;
+				font-size: 1rem;
+				color: #495057;
+			}
+			
+			footer p {
+				margin: 0;
+				font-size: 0.875rem;
+				color: #6c757d;
+			}
+			
+			footer a {
+				color: #007bff;
+				text-decoration: none;
+				transition: color 0.15s ease-in-out;
+			}
+			
+			footer a:hover {
+				color: #0056b3;
+				text-decoration: underline;
+			}
+			
+			/* Ajuste para mobile */
+			@media (max-width: 768px) {
+				footer {
+					padding: 1rem 0;
+					min-height: 70px;
+				}
+			}
+		</style>
+		
+		<footer class="mt-auto">
+			<div class="footer-content">
+				<!-- <a href="contato.html"><h5>Contato</h5></a> -->
+				<p>P.A. 2025 Beatriz Alves</p>
+			</div>
+		</footer>
+
+        <!-- Scripts -->
+        <script>
+            // Configuração do Firebase (use as mesmas credenciais do login.html)
+            const firebaseConfig = {
+                apiKey: "AIzaSyB5VcUXF2RRXfhAokwHh49dTr2Y3HARruI",
+                authDomain: "atosbd.firebaseapp.com",
+                projectId: "atosbd",
+                storageBucket: "atosbd.firebasestorage.app",
+                messagingSenderId: "945960456743",
+                appId: "1:945960456743:web:12be3490cffc8e4631b402"
+            };
+
+            // Inicializa o Firebase
+            firebase.initializeApp(firebaseConfig);
+            const auth = firebase.auth();
+
+            // Verifica se o usuário está logado
+            auth.onAuthStateChanged((user) => {
+                if (user) {
+                    // Mostra o botão Sair
+                    document.getElementById("logout-btn").style.display = "block";
+                    
+                    // Preenche automaticamente o e-mail do usuário logado
+                    document.getElementById("email").value = user.email;
+                    document.getElementById("user-email").textContent = user.email;
+                } else {
+                    // Oculta o botão Sair
+                    document.getElementById("logout-btn").style.display = "none";
+                }
+            });
+
+            // Função para logout
+            function logout() {
+                auth.signOut()
+                    .then(() => {
+                        window.location.href = "login.html";
+                    })
+                    .catch((error) => {
+                        console.error("Erro ao sair:", error);
+                    });
+            }
+
+            // Envio do formulário
+            document.getElementById("contact-form").addEventListener("submit", function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
+                
+                // Aqui você pode adicionar o código para enviar o e-mail
+                // Por exemplo, usando EmailJS, Firebase Functions ou um serviço de backend
+                alert(`Mensagem enviada!\n\nNome: ${name}\nE-mail: ${email}\nMensagem: ${message}`);
+                
+                // Limpa o formulário após o envio
+                this.reset();
+            });
+        </script>
+    </body>
+</html>

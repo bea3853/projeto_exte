@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Violão</title>
+
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		 <script type="text/javascript" src="js/script.js"></script>
+		 <meta name="viewport" content="width=device-width, inital-scale=1.0">
+
+
+	</head>
+
+
+	<body>
+
+		<div id="navigation" class="navigation">
+			<ul>
+				<li><a href="login.html">Home</a></li>
+				<li><a href="aulas.html">Conteúdo</a></li>
+				<li><a href="quem.html">Quem somos</a></li>
+				<li ><a href="#" onclick="logout()">Sair</a></li>
+				<!-- Botão de Sair (oculto inicialmente) -->
+				<!-- <li id="logout-btn" style="display: none;"><a href="#" onclick="logout()">Sair</a></li> -->
+				<li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+			</ul>
+		</div>
+			
+			<div class="main">
+				
+				
+				<ul class="caminho">
+					<li>Home</li>
+					<li>></li>
+					<li>Aulas</li>
+					<li>></li>
+				<li>Dicas</li>
+				</ul>
+
+				<h1>Violão, meu amor ;*</h1>
+				
+				<img class="foto-trabalhos" src="img/v.jpg">
+				
+				<h2>Senhoras e senhores eis aqui o queridinho...</h2>
+				
+				<p>Sim, o queridinho! </p>
+				<p>Dentre 100, 99 querem aprender violão. Não por acaso, é fácil de transportar, tem um som agradável, está presente nas musicas de sucesso,
+				e possui um belo design ;) Ele é muito PoP.</p>
+				<p>Quem toca violão possui um amigo inseperavél, que vai embalar as noites com as melodias que tocam primeiro no coraçao. Sim, o negócio é sériuu...</p>
+				
+				
+				<h2>Primeiros Passos</h2>
+				
+				<p>Na foto acima, conseguimos conhecer um pouco acerca de suas peças, vamos entender agora como segura lo:</p>
+				
+				<ul>
+				<li>Sente em uma cadeira com  a coluna reta </li>
+				<li>Dobre as pernas </li>
+				<li>Coloque o violão no colo</li>
+				<li>Equilibre a base, ou encaixe aquela curva em sua coxa</li></ul>
+				
+				<h2>Mãos</h2>
+				
+				<p>Caso você seja destro, a mão direita vai fazer a batida(ritmo) e a mão esquerda, os acordes (apertar a sequência de notas com os dedos.)</p>
+				<h2>Mas e se eu for canhoto?</h2>
+				<p>Existem canhatos que optam por trocar a sequência das cordas, e aprender do lado ao contrário, como?</p>
+				<p><a href="https://www.youtube.com/watch?v=SyNt5zm3U_M">Paul</a> do Beatleas fazia isso, neste caso ele esta tocando baixo, mas ele toca o violão desta forma também.</p>
+				<p>Note, ele é o único que toca ao contrário no video. Aqui no Brasil a <a href="https://www.youtube.com/watch?v=sEoBe2z1SzE&list=PLyfo4ItS5Yzb8GLHKLlmWrdh3-_3taMws&index=38">Paula Fernades</a> 
+				do sertanejo tambem consegue tocar assim. Observe que todos os musicos no vídeo estão tocando como destros, apenas ela toca como canhoto. É uma técnica um tanto complexa. ideal para
+				aqueles que não abrem mão de suas características.</p>
+				<p>Alguns canhotas preferem aprender da maneira convencional, o posicionamento fica como de um destro, flui normalmente, afinal, tudo é treinamento!</p>
+				
+				<h2>Afinação</h2>
+
+                <p>Instrumento de corda precisa de afinação, clique no link e confira a <a href="afinacao.html">Afinação</a>.</p>
+                <p>A afinação é essencial, recomenda-se afinar o violão todas as vezes em que for toca-lo. Isso inflência diretamente no desempenho e musicalidade.</p> 
+
+ 				<h2>Ritmo</h2>
+				
+				<p>Antes da dança tem a música e para que a dança role legal é necessário que o ritmo das músicas comuns sejam fixos e constantes.</p>
+				<p>Portanto ritmo esta ligado com o movimeto, com a constância.</p>
+				<p>Para realizar a batidas abaixo utilize palheta. Dessa forma tente manter o mesmo tempo entre as batidas se necessário utilize o metrônomo. <a href="https://bit.ly/2mpttsh " Alt="Metrônomo do Google">Clica aqui</a></p>
+				<img class="foto-trabalhos" src="img/t4.jpg" alt="Ritmos básicos">
+				
+			
+				
+		
+			
+				
+<br>
+<h1>Video aula</h1>
+    <style>
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            position: relative;
+            background: #000;
+        }
+        
+        .video-player {
+            width: 100%;
+            display: block;
+        }
+        
+        .controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .video-container:hover .controls {
+            opacity: 1;
+        }
+        
+        .progress-container {
+            width: 100%;
+            height: 5px;
+            background: #333;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: #f00;
+            width: 0%;
+        }
+        
+        button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin: 0 5px;
+            font-size: 16px;
+        }
+        
+        .time {
+            color: white;
+            margin: 0 10px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .volume-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+        
+        .volume-slider {
+            width: 80px;
+            height: 5px;
+            background: #333;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        
+        .volume-level {
+            height: 100%;
+            background: white;
+            width: 100%;
+        }
+    </style>
+
+
+    <div class="video-container">
+        <video class="video-player" src="https://videos.pexels.com/video-files/854923/854923-hd_1920_1080_25fps.mp4"></video>
+        
+        <div class="controls">
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            
+            <button class="play-btn">►</button>
+            <span class="time">0:00 / 0:00</span>
+            
+            <div class="volume-container">
+                <button class="mute-btn">🔊</button>
+                <div class="volume-slider">
+                    <div class="volume-level"></div>
+                </div>
+            </div>
+            
+            <button class="fullscreen-btn">⛶</button>
+        </div>
+    </div>
+
+    <script>
+        // Elementos
+        const video = document.querySelector('.video-player');
+        const playBtn = document.querySelector('.play-btn');
+        const muteBtn = document.querySelector('.mute-btn');
+        const volumeSlider = document.querySelector('.volume-slider');
+        const volumeLevel = document.querySelector('.volume-level');
+        const progressContainer = document.querySelector('.progress-container');
+        const progressBar = document.querySelector('.progress-bar');
+        const timeDisplay = document.querySelector('.time');
+        const fullscreenBtn = document.querySelector('.fullscreen-btn');
+        const videoContainer = document.querySelector('.video-container');
+
+        // Play/Pause
+        playBtn.addEventListener('click', togglePlay);
+        video.addEventListener('click', togglePlay);
+
+        function togglePlay() {
+            if (video.paused) {
+                video.play();
+                playBtn.textContent = '❚❚';
+            } else {
+                video.pause();
+                playBtn.textContent = '►';
+            }
+        }
+
+        // Volume
+        muteBtn.addEventListener('click', toggleMute);
+        volumeSlider.addEventListener('click', setVolume);
+
+        function toggleMute() {
+            video.muted = !video.muted;
+            muteBtn.textContent = video.muted ? '🔇' : '🔊';
+        }
+
+        function setVolume(e) {
+            const rect = volumeSlider.getBoundingClientRect();
+            const pos = (e.clientX - rect.left) / rect.width;
+            video.volume = pos;
+            volumeLevel.style.width = `${pos * 100}%`;
+            video.muted = pos === 0;
+            muteBtn.textContent = pos === 0 ? '🔇' : '🔊';
+        }
+
+        // Progresso
+        video.addEventListener('timeupdate', updateProgress);
+        progressContainer.addEventListener('click', setProgress);
+
+        function updateProgress() {
+            const percent = (video.currentTime / video.duration) * 100;
+            progressBar.style.width = `${percent}%`;
+            
+            // Formatar tempo
+            const formatTime = (time) => {
+                const minutes = Math.floor(time / 60);
+                const seconds = Math.floor(time % 60);
+                return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            };
+            
+            timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
+        }
+
+        function setProgress(e) {
+            const rect = progressContainer.getBoundingClientRect();
+            const pos = (e.clientX - rect.left) / rect.width;
+            video.currentTime = pos * video.duration;
+        }
+
+        // Tela cheia
+        fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                videoContainer.requestFullscreen().catch(err => {
+                    console.error(`Erro ao tentar tela cheia: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+<br>
+
+				&#8592;<a class="back-link" href="aulas.html" target="blank">Voltar<a>
+
+			</div>	
+
+			
+
+	</body>
+
+			<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+<script>
+    // Configuração do Firebase (use as mesmas credenciais do login.html)
+    const firebaseConfig = {
+        apiKey: "AIzaSyB5VcUXF2RRXfhAokwHh49dTr2Y3HARruI",
+        authDomain: "atosbd.firebaseapp.com",
+        projectId: "atosbd",
+        storageBucket: "atosbd.firebasestorage.app",
+        messagingSenderId: "945960456743",
+        appId: "1:945960456743:web:12be3490cffc8e4631b402"
+    };
+
+    // Inicializa o Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    // Mostra/oculta o botão "Sair" conforme o estado de login
+    auth.onAuthStateChanged((user) => {
+        if (user) {
+            document.getElementById("logout-btn").style.display = "block";
+        } else {
+            document.getElementById("logout-btn").style.display = "none";
+        }
+    });
+
+    // Função para logout
+    function logout() {
+        auth.signOut()
+            .then(() => {
+                window.location.href = "index.html"; // Redireciona para a página de login
+            })
+            .catch((error) => {
+                console.error("Erro ao sair:", error);
+            });
+    }
+</script>
+
+</html>

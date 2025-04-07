@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Projeto Atos</title>
+
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	    <script type="text/javascript" src="js/script.js"></script>	
+		 <meta name="viewport" content="width=device-width, inital-scale=1.0">
+	</head>
+
+<!---963--->
+
+	<body>
+		<div id="navigation" class="navigation">
+			<ul>
+				<li><a href="login.html">Home</a></li>
+				<li><a href="aulas.html">Conteúdo</a></li>
+				<li><a href="quem.html">Quem somos</a></li>
+				<li ><a href="#" onclick="logout()">Sair</a></li>
+				<!-- Botão de Sair (oculto inicialmente) -->
+				<!-- <li id="logout-btn" style="display: none;"><a href="#" onclick="logout()">Sair</a></li> -->
+				<li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+			</ul>
+		</div>
+			
+		<br>
+		<br>
+			
+
+			<div class="capa">
+			
+			   <div class="profile-pic">
+				<a href="aulas.html"><img src= "img/home.jpg" alt="Foto de Stas Knop no Pexels" ></a>
+							
+				</div>
+				
+		 
+            <div class="profile-title">			   
+				<h1>Projeto  <span>Atos <span></h1>
+				<h2>Treinamento é a chave! </h2>
+			</div>
+			
+			</div>
+
+<style>
+
+			
+footer {
+	background-color: #f8f9fa;
+	padding: 1.2rem 0;
+	text-align: center;
+	border-top: 1px solid #e9ecef;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+				
+				footer h5 {
+					margin: 0 0 0.5rem 0;
+					font-size: 1rem;
+					color: #495057;
+				}
+				
+				footer p {
+					margin: 0;
+					font-size: 0.875rem;
+					color: #6c757d;
+				}
+				
+				footer a {
+					color: #007bff;
+					text-decoration: none;
+					transition: color 0.15s ease-in-out;
+				}
+				
+				footer a:hover {
+					color: #0056b3;
+					text-decoration: underline;
+				}
+				
+				/* Ajuste para mobile */
+				@media (max-width: 768px) {
+					footer {
+						padding: 1rem 0;
+						min-height: 70px;
+					}
+				}
+			</style>
+			
+			<footer class="mt-auto">
+				<div class="footer-content">
+					<a href="contato.html"><h5>Contato</h5></a>
+					<p>P.A. 2025 Beatriz Alves</p>
+				</div>
+			</footer>
+    
+
+		
+
+	  
+	     </div>
+		 	
+	</body>
+
+	<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+<script>
+    // Configuração do Firebase (use as mesmas credenciais do login.html)
+    const firebaseConfig = {
+        apiKey: "AIzaSyB5VcUXF2RRXfhAokwHh49dTr2Y3HARruI",
+        authDomain: "atosbd.firebaseapp.com",
+        projectId: "atosbd",
+        storageBucket: "atosbd.firebasestorage.app",
+        messagingSenderId: "945960456743",
+        appId: "1:945960456743:web:12be3490cffc8e4631b402"
+    };
+
+    // Inicializa o Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    // Mostra/oculta o botão "Sair" conforme o estado de login
+    auth.onAuthStateChanged((user) => {
+        if (user) {
+            document.getElementById("logout-btn").style.display = "block";
+        } else {
+            document.getElementById("logout-btn").style.display = "none";
+        }
+    });
+
+    // Função para logout
+    function logout() {
+        auth.signOut()
+            .then(() => {
+                window.location.href = "index.html"; // Redireciona para a página de login
+            })
+            .catch((error) => {
+                console.error("Erro ao sair:", error);
+            });
+    }
+</script>
+
+</html>

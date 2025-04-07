@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Conteúdo</title>
+
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<script type="text/javascript" src="js/script.js"></script>
+		 <meta name="viewport" content="width=device-width, inital-scale=1.0">
+
+
+	</head>
+
+
+	<body>
+		<div id="navigation" class="navigation">
+			<ul>
+				<li><a href="login.html">Home</a></li>
+				<li><a href="aulas.html">Conteúdo</a></li>
+				<li><a href="quem.html">Quem somos</a></li>
+				<li ><a href="#" onclick="logout()">Sair</a></li>
+				<!-- Botão de Sair (oculto inicialmente) -->
+				<!-- <li id="logout-btn" style="display: none;"><a href="#" onclick="logout()">Sair</a></li> -->
+				<li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+			</ul>
+		</div>
+			
+			<div class="main">
+				
+				
+				
+                 
+				<h1>Sim, Você pode!</h1>
+		
+				
+				
+				<div style="background-image:url('img/d4.jpg')" class="miniatura" alt="Foto de JTMultimidia no Pexels">
+				<a href="bateria.html" target="blank">
+				<div class="blackbox">
+				<div class="blackbox-text">
+				<h1>Bateria</h1>
+				<h3>Clique aqui ;)</h3>
+				</div>
+				</div>
+				</div>
+				</a>
+				
+				
+				<div style="background-image:url('img/v5.jpg')" class="miniatura" alt="Foto de Negative Space no Pexels">
+				<a href="violao.html" target="blank">
+				<div class="blackbox">
+				<div class="blackbox-text">
+				<h1>Violão</h1>
+				<h3>Clique aqui ;)</h3>
+				</div>
+				</div>
+				</div>
+				</a>
+				
+				<div style="background-image:url('img/b4.jpg')" class="miniatura" alt="Foto de Pixabay no Pexels">
+				<a href="baixo.html" target="blank">
+				<div class="blackbox">
+				<div class="blackbox-text">
+				<h1>Baixo</h1>
+				<h3>Clique aqui :)</h3>
+				</div>
+				</div>
+				</div>
+				</a>
+				
+				<div style="background-image:url('img/teoria.jpg')" class="miniatura" alt="Foto de JTMultimidia no Pexels">
+				<a href="teoria.html" target="blank">
+				<div class="blackbox">
+				<div class="blackbox-text">
+				<h1>Teoria Musical</h1>
+				<h3>Clique aqui ;)</h3>
+				</div>
+				</div>
+				</div>
+				</a>
+				
+				<div style="background-image:url('img/afinacao.jpg')" class="miniatura" alt="Foto de JTMultimidia no Pexels">
+				<a href="afinacao.html" target="blank">
+				<div class="blackbox">
+				<div class="blackbox-text">
+				<h1>Afinação dos instrumentos</h1>
+				<h3>Clique aqui ;o</h3>
+				</div>
+				</div>
+				</div>
+				</a>
+				
+				
+<br>
+
+				&#8592;<a class="back-link" href="index.html" target="blank">Voltar ao início<a>
+
+			</div>	
+
+			
+
+	</body>
+
+		<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+<script>
+    // Configuração do Firebase (use as mesmas credenciais do login.html)
+    const firebaseConfig = {
+        apiKey: "AIzaSyB5VcUXF2RRXfhAokwHh49dTr2Y3HARruI",
+        authDomain: "atosbd.firebaseapp.com",
+        projectId: "atosbd",
+        storageBucket: "atosbd.firebasestorage.app",
+        messagingSenderId: "945960456743",
+        appId: "1:945960456743:web:12be3490cffc8e4631b402"
+    };
+
+    // Inicializa o Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    // Mostra/oculta o botão "Sair" conforme o estado de login
+    auth.onAuthStateChanged((user) => {
+        if (user) {
+            document.getElementById("logout-btn").style.display = "block";
+        } else {
+            document.getElementById("logout-btn").style.display = "none";
+        }
+    });
+
+    // Função para logout
+    function logout() {
+        auth.signOut()
+            .then(() => {
+                window.location.href = "index.html"; // Redireciona para a página de login
+            })
+            .catch((error) => {
+                console.error("Erro ao sair:", error);
+            });
+    }
+</script>
+
+</html>
