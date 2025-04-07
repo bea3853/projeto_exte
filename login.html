@@ -3,16 +3,17 @@
 <html>
 
 	<head>
-		<title>Projeto Atos</title>
+		<title>Quem?</title>
 
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-	    <script type="text/javascript" src="js/script.js"></script>	
+		 <script type="text/javascript" src="js/script.js"></script>
 		 <meta name="viewport" content="width=device-width, inital-scale=1.0">
+
+
 	</head>
 
-<!---963--->
 
 	<body>
 		<div id="navigation" class="navigation">
@@ -27,44 +28,58 @@
 			</ul>
 		</div>
 			
-		<br>
-		<br>
-			
-
-			<div class="capa">
-			
-			   <div class="profile-pic">
-				<a href="aulas.html"><img src= "img/home.jpg" alt="Foto de Stas Knop no Pexels" ></a>
-							
-				</div>
+			<div class="main">
 				
-		 
-            <div class="profile-title">			   
-				<h1>Projeto  <span>Atos <span></h1>
-				<h2>Treinamento é a chave! </h2>
-			</div>
-			
-			</div>
+				
+				<ul class="caminho">
+					<li>Home</li>
+					<li></li>
+					<li>Aulas</li>
+					<li></li>
+					<li>Quem somos?</li>
+				</ul>
 
-<style>
-
+				<h1>Quem Somos:</h1>
+				
+				<p>Somos apenas uma galera que curti aprender para ensinar.</p>
+				<p>Nossa busca é eterna! </p>
+				<hr>	
+                <p>Nosso aprendizado tem sido através da internet e do esforço pessoal de cada um. Não tem grana envolvida,</p>				
+				<p>Imagens foram extraidas do Pexel</p>
+				
+				
+				<p></p>
+				
+				
+				
 			
-footer {
-	background-color: #f8f9fa;
-	padding: 1.2rem 0;
-	text-align: center;
-	border-top: 1px solid #e9ecef;
-	width: 100%;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 1000;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
+			
+				
+<br>
+<br>
+
+				&#8592;<a class="back-link" href="aulas.html" target="blank">Voltar<a>
+
+			</div>	
+
+			<style>
+
+				footer {
+        background-color: #f8f9fa;
+        padding: 1.2rem 0;
+        text-align: center;
+        border-top: 1px solid #e9ecef;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 				
 				footer h5 {
 					margin: 0 0 0.5rem 0;
@@ -104,31 +119,20 @@ footer {
 					<p>P.A. 2025 Beatriz Alves</p>
 				</div>
 			</footer>
-    
+			<script src="firebase-config.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+			<script>
+				firebase.initializeApp(window.firebaseConfig);
+				const script = document.createElement('script');
+				script.src = 'auth-check.js';
+				document.body.appendChild(script);</script>
 
-		
-
-	  
-	     </div>
-
-
-<script src="firebase-config.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-<script>
-    firebase.initializeApp(window.firebaseConfig);
-    const script = document.createElement('script');
-    script.src = 'auth-check.js';
-    document.body.appendChild(script);
-</script>
-		 	
 	</body>
 
-	<!-- Firebase SDK -->
-	<script src="firebase-config.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-
+	
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 
 <script>
     // Configuração do Firebase (use as mesmas credenciais do login.html)
@@ -165,6 +169,7 @@ footer {
             });
     }
 </script>
+
 
 
 
