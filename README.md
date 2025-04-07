@@ -26,6 +26,7 @@ O **Projeto Atos** é uma iniciativa que combina tecnologia e cultura, oferecend
 
 ### Implantação
 - Hospedagem - Netlifyapp
+  https://atosmus.netlify.app/
   
 ## 🎼 Conteúdo Musical Oferecido
 - Teoria musical básica
