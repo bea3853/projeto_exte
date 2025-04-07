@@ -37,9 +37,7 @@ O **Projeto Atos** é uma iniciativa que combina tecnologia e cultura, oferecend
 ## 👩‍💻 Autora
 
 **Beatriz Alves**  
-Engenheira de Software e entusiasta de música
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/beatriz2071/)
+Engenharia de Software 
 
 ## 📄 Licença
 
