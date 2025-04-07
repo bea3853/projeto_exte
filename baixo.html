@@ -249,11 +249,15 @@
 				&#8592;<a class="back-link" href="aulas.html" target="blank">Voltar<a>
 
 			</div>	
-
 			<script src="firebase-config.js"></script>
 			<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 			<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-			<script src="auth-check.js"></script>	
+			<script>
+				firebase.initializeApp(window.firebaseConfig);
+				const script = document.createElement('script');
+				script.src = 'auth-check.js';
+				document.body.appendChild(script);</script>
+			
 
 	</body>
 
@@ -296,5 +300,8 @@
             });
     }
 </script>
+
+<!-- Adicione esses scripts no final do body -->
+
 
 </html>
