@@ -18,14 +18,15 @@ O **Projeto Atos** é uma iniciativa que combina tecnologia e cultura, oferecend
 ## 🛠 Tecnologias Utilizadas
 
 ### Frontend
-- **HTML5** - Estruturação do conteúdo
-- **CSS3** - Estilização e design responsivo
-- **JavaScript** - Interatividade e funcionalidades
-- **Firebase** - Autenticação de usuários (opcional)
+- HTML5- Estruturação do conteúdo
+- CSS - Estilização e design responsivo
+- JavaScript - Interatividade e funcionalidades
+- Firebase - Autenticação de usuários (opcional)
+
 
 ### Implantação
-- **GitHub Pages** - Hospedagem estática
-
+- Hospedagem - Netlifyapp
+  
 ## 🎼 Conteúdo Musical Oferecido
 - Teoria musical básica
 - Técnicas para instrumentos (violão, baixo, bateria)
