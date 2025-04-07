@@ -1,14 +1,16 @@
-// Verifica autenticação em todas as páginas protegidas
+// auth-check.js
 firebase.auth().onAuthStateChanged((user) => {
-    const currentPage = window.location.pathname.split('/').pop();
+    const publicPages = ['index.html', '']; // Páginas que não requerem login
+    const currentPage = window.location.pathname.split('/').pop().toLowerCase();
     
-    // Se não está logado e tenta acessar páginas protegidas
-    if (!user && !['index.html', ''].includes(currentPage)) {
+    // Se usuário NÃO está logado e a página NÃO é pública
+    if (!user && !publicPages.includes(currentPage)) {
         window.location.href = 'index.html';
+        return;
     }
     
-    // Se está logado e tenta acessar a página de login
-    if (user && ['index.html', ''].includes(currentPage)) {
+    // Se usuário ESTÁ logado e está na página de login
+    if (user && currentPage === 'index.html') {
         window.location.href = 'login.html';
     }
 });
